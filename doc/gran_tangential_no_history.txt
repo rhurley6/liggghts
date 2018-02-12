@@ -1,0 +1,31 @@
+"LIGGGHTS(R)-PUBLIC WWW Site"_liws - "LIGGGHTS(R)-PUBLIC Documentation"_ld - "LIGGGHTS(R)-PUBLIC Commands"_lc :c
+
+:link(liws,http://www.cfdem.com)
+:link(ld,Manual.html)
+:link(lc,Section_commands.html#comm)
+
+:line
+
+gran tangential no_history :h3
+
+[Syntax:]
+
+tangential no_history :pre
+
+[LIGGGHTS(R)-PUBLIC vs. LIGGGHTS(R)-PUBLIC Info:]
+
+This part of "pair gran"_pair_gran.html and
+"fix wall/gran"_fix_wall_gran.html
+is not availabe in LIGGGHTS(R)-PUBLIC.
+
+[Description:]
+
+This granular model is based on the general description of granular
+force interaction as described in "pair gran"_pair_gran.html.
+
+If this model is chose, then this "tangential overlap" spring force is
+NOT calculated / taken into account, i.e. k_t = 0.
+
+The coefficient of friction cof is the upper limit of the tangential force through
+the Coulomb criterion Ft = cof*Fn, where Ft and Fn are the tangential spring and normal
+force components in the formulas above.

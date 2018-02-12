@@ -1,0 +1,90 @@
+<HTML>
+<CENTER><A HREF = "http://www.cfdem.com">LIGGGHTS(R)-PUBLIC WWW Site</A> - <A HREF = "Manual.html">LIGGGHTS(R)-PUBLIC Documentation</A> - <A HREF = "Section_commands.html#comm">LIGGGHTS(R)-PUBLIC Commands</A> 
+</CENTER>
+
+
+
+
+
+
+<HR>
+
+<H3>pair_style command 
+</H3>
+<P><B>Syntax:</B>
+</P>
+<PRE>pair_style style args 
+</PRE>
+<UL><LI>style = one of the styles from the list <A HREF = "Section_commands.html#cmd_5">here</A>
+<LI>args = arguments used by a particular style 
+</UL>
+<P><B>Examples:</B>
+</P>
+<PRE>pair_style gran model hertz tangential history
+pair_style none 
+</PRE>
+<P><B>Description:</B>
+</P>
+<P>Set the formula(s) LIGGGHTS(R)-PUBLIC uses to compute pairwise interactions.  In
+LIGGGHTS(R)-PUBLIC, pair potentials are defined between pairs of atoms that are
+within a cutoff distance and the set of active interactions typically
+changes over time.  See the <A HREF = "bond_style.html">bond_style</A> command to
+define potentials between pairs of bonded atoms, which typically
+remain in place for the duration of a simulation.
+</P>
+<P>The full list of pair styles defined in LIGGGHTS(R)-PUBLIC is on <A HREF = "Section_commands.html#cmd_5">this
+page</A>.
+</P>
+<P>Hybrid models where specified pairs of atom types interact via
+different pair potentials can be setup using the <I>hybrid</I> pair style.
+</P>
+<P>The coefficients associated with a pair style are typically set for
+each pair of atom types, and are specified by the
+<A HREF = "pair_coeff.html">pair_coeff</A> command or read from a file by the
+<A HREF = "read_data.html">read_data</A> or <A HREF = "read_restart.html">read_restart</A>
+commands.
+</P>
+<P>The <A HREF = "pair_modify.html">pair_modify</A> command sets options for mixing of
+type I-J interaction coefficients.
+</P>
+<P>If the pair_style command has a cutoff argument, it sets global
+cutoffs for all pairs of atom types.  The distance(s) can be smaller
+or larger than the dimensions of the simulation box.
+</P>
+<P>Typically, the global cutoff value can be overridden for a specific
+pair of atom types by the <A HREF = "pair_coeff.html">pair_coeff</A> command.  The
+pair style settings (including global cutoffs) can be changed by a
+subsequent pair_style command using the same style.  This will reset
+the cutoffs for all atom type pairs, including those previously set
+explicitly by a <A HREF = "pair_coeff.html">pair_coeff</A> command.  The exceptions
+to this are that pair_style <I>table</I> and <I>hybrid</I> settings cannot be
+reset.  A new pair_style command for these styles will wipe out all
+previously specified pair_coeff values.
+</P>
+<HR>
+
+<P>The full list of pair styles defined in LIGGGHTS(R)-PUBLIC is on <A HREF = "Section_commands.html#cmd_5">this
+page</A>.
+</P>
+<P><B>Restrictions:</B>
+</P>
+<P>This command must be used before any coefficients are set by the
+<A HREF = "pair_coeff.html">pair_coeff</A>, <A HREF = "read_data.html">read_data</A>, or
+<A HREF = "read_restart.html">read_restart</A> commands.
+</P>
+<P>Some pair styles are part of specific packages.  They are only enabled
+if LIGGGHTS(R)-PUBLIC was built with that package.  See the <A HREF = "Section_start.html#start_3">Making
+LIGGGHTS(R)-PUBLIC</A> section for more info on packages.
+The doc pages for individual pair potentials tell if it is part of a
+package.
+</P>
+<P><B>Related commands:</B>
+</P>
+<P><A HREF = "pair_coeff.html">pair_coeff</A>, <A HREF = "read_data.html">read_data</A>,
+<A HREF = "pair_modify.html">pair_modify</A>, <A HREF = "dielectric.html">dielectric</A>,
+</P>
+<P><B>Default:</B>
+</P>
+<PRE>pair_style none 
+</PRE>
+</HTML>

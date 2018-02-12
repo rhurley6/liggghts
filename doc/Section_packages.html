@@ -1,0 +1,64 @@
+<HTML>
+<CENTER><A HREF = "Section_gran_models.html">Previous Section</A> - <A HREF = "lws">LIGGGHTS(R)-PUBLIC WWW Site</A> - <A HREF = "Manual.html">LIGGGHTS(R)-PUBLIC Documentation</A> - <A HREF = "Section_commands.html#comm">LIGGGHTS(R)-PUBLIC Commands</A> - <A HREF = "Section_howto.html">Next Section</A> 
+</CENTER>
+
+
+
+
+
+
+<HR>
+
+<H3>6. Packages 
+</H3>
+<P>This section gives a quick overview of the add-on packages that extend
+LIGGGHTS(R)-PUBLIC functionality.
+</P>
+<P>LIGGGHTS(R)-PUBLIC includes optional packages, which are groups of files that
+enable a specific set of features.  For example, force fields for
+molecular systems or granular systems are in packages.  You can see
+the list of all packages by typing "make package" from within the src
+directory of the LIGGGHTS(R)-PUBLIC distribution.
+</P>
+<P>See <A HREF = "Section_start.html#start_3">Section_start 3</A> of the manual for
+details on how to include/exclude specific packages as part of the
+LIGGGHTS(R)-PUBLIC build process, and for more details about the differences
+between standard packages and user packages in LIGGGHTS(R)-PUBLIC.
+</P>
+<P>Below, the packages currently availabe in LIGGGHTS(R)-PUBLIC are listed.  For
+standard packages, just a one-line description is given:
+</P>
+<DIV ALIGN=center><TABLE  BORDER=1 >
+<TR ALIGN="center"><TD >Package</TD><TD > Description</TD><TD > Author(s)</TD><TD > Doc page</TD><TD > Example</TD><TD > Library</TD></TR>
+<TR ALIGN="center"><TD >ASPHERE</TD><TD > aspherical particles</TD><TD > -</TD><TD > <A HREF = "Section_howto.html#howto_14">Section_howto</A></TD><TD > ellipse</TD><TD > -</TD></TR>
+<TR ALIGN="center"><TD >MOLECULE</TD><TD > molecular system force fields</TD><TD > -</TD><TD > -</TD><TD > -</TD><TD > -</TD></TR>
+<TR ALIGN="center"><TD >POEMS</TD><TD > coupled rigid body motion</TD><TD > Rudra Mukherjee (JPL)</TD><TD > <A HREF = "fix_poems.html">fix poems</A></TD><TD > rigid</TD><TD > lib/poems</TD></TR>
+<TR ALIGN="center"><TD >RIGID</TD><TD > rigid bodies</TD><TD > -</TD><TD > <A HREF = "fix_rigid.html">fix rigid</A></TD><TD > rigid</TD><TD > -</TD></TR>
+<TR ALIGN="center"><TD >VORONOI</TD><TD > Voronoi tesselations</TD><TD > Daniel Schwen (LANL)</TD><TD > <A HREF = "compute_voronoi_atom.html">compute voronoi/atom</A></TD><TD > -</TD><TD > Voro++</TD></TR>
+<TR ALIGN="center"><TD >
+</TD></TR></TABLE></DIV>
+
+<P>The "Doc page" column links to either a portion of the
+<A HREF = "Section_howto.html">Section_howto</A> of the manual, or an input script
+command implemented as part of the package.
+</P>
+<P>The "Example" column is a sub-directory in the examples directory of
+the distribution which has an input script that uses the package.
+E.g. "peptide" refers to the examples/peptide directory.
+</P>
+<P>The "Library" column lists an external library which must be built
+first and which LIGGGHTS(R)-PUBLIC links to when it is built.  If it is listed as
+lib/package, then the code for the library is under the lib directory
+of the LIGGGHTS(R)-PUBLIC distribution.  See the lib/package/README file for info
+on how to build the library.  If it is not listed as lib/package, then
+it is a third-party library not included in the LIGGGHTS(R)-PUBLIC distribution.
+See the src/package/README or src/package/Makefile.lammps file for
+info on where to download the library.  <A HREF = "Section_start.html#start_3_3">Section
+start</A> of the manual also gives details
+on how to build LIGGGHTS(R)-PUBLIC with both kinds of auxiliary libraries.
+</P>
+<HR>
+
+<HR>
+
+</HTML>
